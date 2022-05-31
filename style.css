@@ -1,0 +1,241 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+/*VARIAVEIS*/
+
+a{
+    color: var(--corDeAzul);
+    text-decoration: none;
+}
+
+body{
+    --corDeFundoClaro:#FAFAFA;
+    --corDeFundoBranco:rgb(255, 255, 255);
+    --corDeAzul:#3c96ed;
+    --corDePreto:#000000;
+    --corDeborda:#e6e6e6;
+
+    background:var(--corDeFundoclaro);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+}
+#wrapper{
+    height: 100vh;
+}
+#container{
+    margin: 0 auto;
+    min-height: 100%;
+    width: 800px;
+    display: flex;
+    align-items: center;
+}
+.coluna{
+    flex-grow: 1;
+    width: 50%;
+}
+.esquerda{
+    background-image: url(/insta-pro/imagens/main-foto.png);
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    margin-bottom: 50px;
+}
+.direita{
+
+    padding-left: 20px;
+
+}
+.login{
+    background-color: var(--corDeFundoBranco);
+    border: 1px solid var(--corDeborda);
+    text-align: center;
+    padding: 20px;
+
+}
+.logoImg{
+    width: 175px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+input[type="senhaP"],input[type="text"]{
+    background-color: var(--corDeFundoBranco);
+    border: 1px solid rgb(236,234,234);
+    height: 40px;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 14px;
+    width: 320px;
+}
+
+input[type="senhaP"]::placeholder,input[type="text"]::placeholder{
+    color: rgb(165,164,164);
+}
+input[type="senhaP"]:focus,input[type="text"]:focus{
+    outline: 0;
+    border: 1px solid #a1a1a1;
+
+}
+input[type="submit"]{
+    width: 320px;
+    margin-top: 10px;
+    height: 40px;
+    border: 0px;
+    border-radius: 4px;
+    background-color: #3c96ed;
+    color:var(--corDeFundoBranco);
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
+.cadastro{
+    background-color:var(--corDeFundoBranco);
+    height: 60px;
+    border: 1px solid rgb(236,234,234);
+    margin-top: 10px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cadastro p {
+    user-select: none;
+}
+
+.cadastro p a{
+    font-weight: bold;
+    user-select: none;
+}
+.extra{
+    margin-top: 20px;
+    text-align: center;
+}
+.appsbotao{
+    margin-top: 10px;
+}
+.appsbotao img{
+    height: 40px;
+    padding: 0 2px;
+}
+footer{
+    text-align: center;
+    height: 50px;
+    margin-top: -50px;
+}
+footer a{
+    text-decoration: none;
+    color: var(--corDePreto);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-right: 7px;
+}
+footer .texto-small{
+    font-size: 12px;
+    font-weight: bold;
+    color: #a1a1a1;
+    text-transform: uppercase;
+    padding-left: 20px;
+    display: inline-block;
+    padding-left:20px ;
+
+}
+/*PAGINA DE CADASTRO*/
+.container-cadastro{
+    margin: 0 auto;
+    min-height: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+ .mensagem{
+    margin :10px 50px;
+}
+.mensagem span{
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+    line-height: 20px;
+    color: #8e8e8e;
+}
+.divisor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+
+}
+.divisorTag{
+    font-weight: bold;
+    margin: 0 2.5%;
+    color: #8e8e8e;
+}
+.linha{
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 40%;
+}
+.botaoFacebook{
+    width: 320px;
+    height: 40px;
+    margin: 10px 0;
+    background-color: #3c96ed;
+    color:var(--corDeFundoBranco);
+    border-radius: 4px;
+    font-size: 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border: 0px;
+}
+/* FIM PAGINA DE CADASTRO*/
+
+/*RESPONSIVIDADE*/
+@media(max-width:850px){
+    .esquerda{
+        display: none;
+    }
+    #container {
+        width: 70%;
+
+    }
+    .direita{
+        padding-left: 0px;
+    }
+}
+@media (max-width:480px){
+    #container{
+        width: 90%;
+    }
+    .container-cadastro{
+        width: 90%;
+    }
+    input[type="senhaP"],input[type="text"],input[type="submit"]{
+        width: 80%;
+    }
+    .botaoFacebook{
+        width: 80%;
+    }
+    .mensagem{
+        margin: 10px 30px;
+    }
+    footer{
+        margin-top: 0px;
+    }
+}
